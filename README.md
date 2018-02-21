@@ -52,4 +52,3 @@ This is a major piece of work and it is expected that you will need to do some v
 and that ideally your research will be as up to date as possible given that this is a very rapidly moving
 field. Work containing vague descriptions or unsupported assertions will be penalised. 
 
-# Ap
