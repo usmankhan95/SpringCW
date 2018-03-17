@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+</head>
+<body>
+    <h1>Employee Details</h1>
+    <p th:text="'Employee ID: ' + ${employee.empID}" />
+    <p th:text="'Employee Name: ' + ${employee.empName}" />
+    <p th:text="'Hourly Wage: £' + ${employee.empHourlyRate}" />
+    <p th:text="'Weekly Hours: ' + ${employee.empWeeklyHours}" />
+    <p th:text="'Weekly Wage: £' + ${getWeeklyWage}" />
+    <br>
+    <button type = "button"><a href="/employee/new">Add another employee</a></button>
+    &nbsp; &nbsp;
+    <button type = "button"><a href="/allemployees">View all employees</a></button>
+    &nbsp; &nbsp;
+    <button type = "button"><a th:href="${'/employee/delete/' + employee.empID}">Delete</a></button>
+</body>
+</html>

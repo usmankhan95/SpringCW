@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: com.springemployeecw.SpringEmployeeCwApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.265 s <<< FAILURE! - in com.springemployeecw.SpringEmployeeCwApplicationTests
+initializationError(com.springemployeecw.SpringEmployeeCwApplicationTests)  Time elapsed: 0.006 s  <<< ERROR!
+java.lang.Exception: No runnable methods
+

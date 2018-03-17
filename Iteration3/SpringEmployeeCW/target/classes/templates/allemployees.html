@@ -1,0 +1,44 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Employees</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Employee List</h1>
+        <div class="container">
+        
+            <div th:if="${not #lists.isEmpty(allemployees)}">
+                <table class="table table-striped">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Hourly Rate</th>
+                        <th>Weekly Hours</th>
+                        <th>View</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                    <tr th:each="employee : ${allemployees}">
+                        <td th:text="${employee.empID}"><a href="/employee/${employee.empID}">Employee ID</a></td>
+                        <td th:text="${employee.empName}">Employee Name</td>
+                        <td th:text="${employee.empHourlyRate}">Hourly Rate</td>
+                        <td th:text="${employee.empWeeklyHours}">Weekly Hours</td>
+                        <td><a th:href="${'employee/' + employee.empID}">View</a></td>
+                        <td><a th:href="${'employee/edit/' + employee.empID}">Edit</a></td>
+                        <td><a th:href="${'employee/delete/' + employee.empID}">Delete</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <br>
+        <p th:text="'Employees Total Weekly Wages: £' + ${getTotalWeeklyWage}" />
+        <p th:text="'Employees Average Weekly Wage: £' + ${getEmpAverage}" />
+        <p th:text="'Employee Max Wage: £' + ${getEmpMax}" />
+        <p th:text="'Employee Min Wage: £' + ${getEmpMin}" />    
+        <br>
+        <button type = "button"><a href="/employee/new">Add another employee</a></button>
+        &nbsp; &nbsp;
+        
+    </body>
+</html>
