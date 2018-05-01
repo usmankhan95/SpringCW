@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringEmployeeCwApplication {
 
 	public static void main(String[] args) {
-
-		SpringApplication.run(SpringEmployeeCwApplication.class, args);
+            SpringApplication.run(SpringEmployeeCwApplication.class, args);
 	}
 }
